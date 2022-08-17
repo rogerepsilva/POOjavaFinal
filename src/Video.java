@@ -1,10 +1,18 @@
 public class Video implements AcoesVideo{
     
     private String titulo;
-    private float avaliacao;
+    private int avaliacao;
     private int views;
     private int curtidas;
     private boolean reproduzindo;
+
+    public Video(String t){
+        this.setTitulo(t);
+        this.setAvaliacao(1);
+        this.setViews(0);
+        this.setCurtidas(0);
+        this.setReproduzindo(false);
+    }
 
     @Override
     public void play(){
@@ -33,10 +41,10 @@ public class Video implements AcoesVideo{
     public String getTitulo(){
         return this.titulo;
     }
-    public void setAvaliacao(float avaliacao){
+    public void setAvaliacao(int avaliacao){
         this.avaliacao = avaliacao;
     }
-    public float getAvaliacao(){
+    public int getAvaliacao(){
         return this.avaliacao;
     }
     public void setViews(int views){
